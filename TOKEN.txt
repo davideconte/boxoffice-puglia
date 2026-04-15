@@ -1,0 +1,7 @@
+BOXOFFICE — Token di accesso
+============================
+Token: e3a8e38eba19219abd0d8162b57b5898f42949601b57c3e94120c3e5f235e229
+
+URL di accesso: https://boxofficepuglia.it/?token=e3a8e38eba19219abd0d8162b57b5898f42949601b57c3e94120c3e5f235e229
+
+File: ~/Documents/WORKSPACE/CLIENTI/boxoffice/site/.env.local

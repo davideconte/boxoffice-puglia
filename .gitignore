@@ -2,14 +2,6 @@
 /node_modules
 /.pnp
 .pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
 
 # next.js
 /.next/
@@ -26,10 +18,11 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env — mai committare
+# env — MAI committare
 .env
 .env.local
 .env.*.local
+!.env.example
 
 # vercel
 .vercel
@@ -45,3 +38,6 @@ TOKEN.txt
 pdf_text.txt
 varie.md
 tmp_pdf_imgs/
+
+# fonts (copiati manualmente, non necessari nel repo)
+fonts/
