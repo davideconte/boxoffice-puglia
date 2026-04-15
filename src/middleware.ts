@@ -30,21 +30,21 @@ export function middleware(request: NextRequest) {
   }
 
   // Valid token — set cookie if came via URL param
-  const response = NextResponse.next();
   if (queryToken) {
-    response.cookies.set(TOKEN_PARAM, queryToken, {
+    const url = request.nextUrl.clone();
+    url.searchParams.delete(TOKEN_PARAM);
+    const redirectResponse = NextResponse.redirect(url);
+    redirectResponse.cookies.set(TOKEN_PARAM, queryToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
       maxAge: 60 * 60 * 24 * 7,
       path: "/",
     });
-    const url = request.nextUrl.clone();
-    url.searchParams.delete(TOKEN_PARAM);
-    return NextResponse.redirect(url);
+    return redirectResponse;
   }
 
-  return response;
+  return NextResponse.next();
 }
 
 export const config = {
