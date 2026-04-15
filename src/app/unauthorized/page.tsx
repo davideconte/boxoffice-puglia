@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logoWhite from "../../public/logo-white.svg";
+import logoWhite from "../../../public/logo-white.svg";
 
 export default function Unauthorized() {
   return (
