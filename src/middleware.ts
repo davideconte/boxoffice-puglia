@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 
 const VALID_TOKEN = process.env.ACCESS_TOKEN;
 const TOKEN_PARAM = "token";
-const PUBLIC_PATHS = ["/api", "/studio", "/_next", "/favicon.ico", "/og-image.png", "/fonts", "/public"];
+const PUBLIC_PATHS = ["/api", "/studio", "/_next", "/favicon.ico", "/og-image.png", "/fonts", "/public", "/unauthorized"];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
